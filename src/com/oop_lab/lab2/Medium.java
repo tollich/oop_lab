@@ -52,6 +52,6 @@ class Node {
     public int GetData() {
         return  value;
     }
-    
+
 }
 

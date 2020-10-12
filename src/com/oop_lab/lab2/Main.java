@@ -2,29 +2,42 @@ package com.oop_lab.lab2;
 
 public class Main {
     public static void main(String[] args) {
+
     Box box1 = new Box();
-    Box box2 = new Box(2.4f);
-    Box box3 = new Box(2.4f, 5.1f, 6f);
+    Box box2 = new Box(2);
+    Box box3 = new Box(2, 5, 6);
+    
     }
 }
 class Box {
-    float height;
-    float width;
-    float depth;
+    int height;
+    int width;
+    int depth;
 
     public Box() {
         height = 1;
         width = 1;
         depth =1;
     }
-    public Box(float size) {
+    public Box(int size) {
         height = size;
         width = size;
         depth = size;
     }
-    public Box(float h, float w, float d) {
+    public Box(int h, int w, int d) {
         height = h;
         width = w;
         depth = d;
     }
+
+    //advanced level
+
+    public int Volume() {
+        return height * width * depth;
+    }
+    public int Surface() {
+        return (2 * height * width) + (2 * width * depth) + (2 * depth * height);
+    }
+
+    public
 }
