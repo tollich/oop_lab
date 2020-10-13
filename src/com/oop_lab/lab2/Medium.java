@@ -1,7 +1,7 @@
 package com.oop_lab.lab2;
 
 import javax.print.attribute.standard.QueuedJobCount;
-import javax.xml.soap.Node;
+//import javax.xml.soap.Node;
 import java.security.PublicKey;
 
 public class Medium {

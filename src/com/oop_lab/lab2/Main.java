@@ -6,7 +6,7 @@ public class Main {
     Box box1 = new Box();
     Box box2 = new Box(2);
     Box box3 = new Box(2, 5, 6);
-    
+
     }
 }
 class Box {
@@ -39,5 +39,4 @@ class Box {
         return (2 * height * width) + (2 * width * depth) + (2 * depth * height);
     }
 
-    public
 }
