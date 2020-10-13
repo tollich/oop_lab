@@ -14,37 +14,52 @@ public class Main {
 
     System.out.println("Words: " + TextManipulation.countWords(lorem_ispum));
     System.out.println("Sentences: " + TextManipulation.countSentences(lorem_ispum));
-
-
+    System.out.println("Letters: " + TextManipulation.CalculateLetters(lorem_ispum));
+    System.out.println("Vowels: " + TextManipulation.CalculateVowels(lorem_ispum));
 
     }
 }
 
     class TextManipulation {
 
-    //basic lvl
-    public static int countWords(String input) {
-        if (input == null) {
-            return 0;
+        //basic lvl
+        public static int countWords(String input) {
+            if (input == null) {
+                return 0;
+            }
+            String[] words = input.split("\\s+");
+            return words.length;
         }
-        String[] words = input.split("\\s+");
-        return words.length;
-    }
 
-    public static int countSentences(String input) {
-        if (input == null) {
-            return 0;
+        public static int countSentences(String input) {
+            if (input == null) {
+                return 0;
+            }
+            String[] sentences = input.split("[!?.:]+");
+            return sentences.length;
         }
-        String[] sentences = input.split("[!?.:]+");
-        return sentences.length;
+
+        public static int CalculateLetters(String input) {
+            String[] calcLetters = input.trim().split("\\s+");
+            int result = 1;
+            for (int i = 0; i < calcLetters.length; i++) {
+                result = result + calcLetters[i].length();
+            }
+            return result;
+        }
+
+        public static int[] CalculateVowels(String input) {
+            char[] calcVowel = input.toCharArray();
+
+            int vowels = 0;
+
+            for (char i : input) {
+                if (i == 'a' || i == 'e' || i == 'o' || i == 'u') {
+                    vowels++;
+
+                }
+            }
+            return new int[]{vowels};
+        }
     }
-    //advanced lvl
-
-    
-
-
-
-
-
-
 }
