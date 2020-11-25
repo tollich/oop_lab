@@ -1,6 +1,6 @@
 package com.oop_lab.lab1;
 
-public class Main {
+public class Lab1 {
 
     public static void main(String[] args) {
 
